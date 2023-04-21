@@ -9,8 +9,8 @@ errormessage.style.display = "none";
 
 var loginButton = document.querySelector("#button-login");
 
-var fieldsDiv = document.querySelector("#fields");
-fieldsDiv.style.display = "none";
+//var fieldsDiv = document.querySelector("#fields");
+//fieldsDiv.style.display = "none";
 loginButton.onclick = function(){
     var email = encodeURIComponent(document.querySelector("#email-login").value);
     var password = encodeURIComponent(document.querySelector("#password-login").value);
@@ -123,7 +123,7 @@ function loadCustomersFromServer(){
             "Content-Type": "application/x-www-form-urlencoded; utf-8",
         }
     }).then(function(response){
-        fieldsDiv.style.display = "block";
+        //fieldsDiv.style.display = "block";
         response.json().then(function (data){
             console.log("data from server",data);
             

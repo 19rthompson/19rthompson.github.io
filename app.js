@@ -1,4 +1,4 @@
-var BASE_URL = "s23-deploy-19rthompson-production.up.railway.app";
+var BASE_URL = "https://s23-deploy-19rthompson-production.up.railway.app";
 
 var createButton = document.querySelector("#button-create_customer");
 createButton.onclick=createCustomer;

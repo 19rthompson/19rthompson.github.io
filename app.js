@@ -219,7 +219,8 @@ function formatCustomerBox(customerBox,data){
     };
     var text = document.createElement("div");
     console.log("data variable", data);
-    text.innerHTML = data.slice(1,6);
+    var parsedData = "Name: "+data["name"]+", Date: "+data["date"]+", Number of Windows: "+data["number_of_windows"]+", Address: " +data["name"]+", Price: " +data["price"];
+    text.innerHTML = parsedData;
     customerBox.appendChild(text);
     customerBox.appendChild(deleteButton);
     customerBox.appendChild(updateButton);

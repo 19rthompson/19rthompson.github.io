@@ -148,7 +148,7 @@ function formatCustomerBox(customerBox,data){
     var deleteButton = document.createElement("button");
     deleteButton.innerHTML="Delete Customer";
     deleteButton.onclick = function(){
-        var deleteID = data[0];
+        var deleteID = data["id"];
         if (confirm("Are you sure you want to delete "+data[1]+"?")){
             deleteCustomerFromServer(deleteID);
         }
@@ -228,7 +228,7 @@ function formatCustomerBox(customerBox,data){
 function deleteCustomerFromServer(customerID){
     fetch(BASE_URL+"/customers/"+customerID,{
         method: "DELETE",
-        credentials: 'include',
+        credentials: 'include'
     }).then(function (response){
         console.log("response", response.status)
         loadCustomersFromServer();

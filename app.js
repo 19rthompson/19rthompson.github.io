@@ -218,6 +218,7 @@ function formatCustomerBox(customerBox,data){
         };
     };
     var text = document.createElement("div");
+    console.log("text variable: ",text);
     text.innerHTML = data.slice(1,6);
     customerBox.appendChild(text);
     customerBox.appendChild(deleteButton);

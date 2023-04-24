@@ -161,11 +161,11 @@ function formatCustomerBox(customerBox,data){
         var newNumWindows = document.createElement("input");
         var newAddress = document.createElement("input");
         var newPrice = document.createElement("input");
-        newName.value=data[1];
-        newDate.value=data[2];
-        newNumWindows.value=data[3];
-        newAddress.value=data[4];
-        newPrice.value=data[5];
+        newName.value=data["name"];
+        newDate.value=data["date"];
+        newNumWindows.value=data["number_of_windows"];
+        newAddress.value=data["address"];
+        newPrice.value=data["price"];
         var confirmButton = document.createElement("button");
 
         confirmButton.innerHTML = "Confirm";
@@ -197,21 +197,21 @@ function formatCustomerBox(customerBox,data){
         customerBox.appendChild(newFields);
         customerBox.appendChild(confirmButton);
         confirmButton.onclick = function(){
-            var changedData=data.slice();
+            var changedData=Object.assign({}, data);
             if (newName.value){
-                changedData[1]=newName.value;
+                changedData["name"]=newName.value;
             }
             if (newDate.value){
-                changedData[2]=newDate.value;
+                changedData["date"]=newDate.value;
             }
             if (newNumWindows.value){
-                changedData[3]=newNumWindows.value;
+                changedData["number_of_windows"]=newNumWindows.value;
             }
             if (newAddress.value){
-                changedData[4]=newAddress.value;
+                changedData["address"]=newAddress.value;
             }
             if (newPrice.value){
-                changedData[5]=newPrice.value;
+                changedData["price"]=newPrice.value;
             }
              
             replaceCustomer(changedData);
@@ -239,11 +239,11 @@ function deleteCustomerFromServer(customerID){
 function replaceCustomer(data1){
 
     console.log("data1",data1);
-    var name = encodeURIComponent(data1[1]);
-    var date = encodeURIComponent(data1[2]);
-    var numWindows = encodeURIComponent(data1[3]);
-    var address = encodeURIComponent(data1[4]);
-    var price = encodeURIComponent(data1[5]);
+    var name = encodeURIComponent(data1["name"]);
+    var date = encodeURIComponent(data1["date"]);
+    var numWindows = encodeURIComponent(data1["number_of_windows"]);
+    var address = encodeURIComponent(data1["address"]);
+    var price = encodeURIComponent(data1["price"]);
     var data = "name="+name+"&date="+date+"&numWindows="+numWindows+"&address="+address+"&price="+price;
 
     console.log("data = ",data);

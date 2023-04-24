@@ -116,7 +116,7 @@ var listOfCustomers = document.querySelector("#list_of_customers");
 function loadCustomersFromServer(){
     
     listOfCustomers.innerHTML="";
-    fetch(BASE_URL+"/customers",{
+    fetch("https://s23-deploy-19rthompson-production.up.railway.app/customers",{
         method: "GET",
         credentials: 'include',
         headers: {

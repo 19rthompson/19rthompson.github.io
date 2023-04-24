@@ -248,7 +248,7 @@ function replaceCustomer(data1){
 
     console.log("data = ",data);
 
-    fetch(BASE_URL+"/customers/"+data1[0],{
+    fetch(BASE_URL+"/customers/"+data1["id"],{
             method:"PUT",
             body: data,
             credentials: 'include',

@@ -7,69 +7,50 @@
     <body>
         <H1>Welcome to Coach's Webpage</H1>
         <section class="lg:mr-32 flex-grow">
-            <section class="instructions c-textual-content --large px-20 lg:px-32 py-20 lg:py-24">
-            <h2>Instructions</h2>
-            <p>The diamond kata takes as its input a letter, and outputs it in a diamond shape.
-            Given a letter, it prints a diamond starting with 'A', with the supplied letter at the widest point.</p>
-            <h3 id="h-requirements">Requirements</h3>
-            <ul>
-            <li>The first row contains one 'A'.</li>
-            <li>The last row contains one 'A'.</li>
-            <li>All rows, except the first and last, have exactly two identical letters.</li>
-            <li>All rows have as many trailing spaces as leading spaces. (This might be 0).</li>
-            <li>The diamond is horizontally symmetric.</li>
-            <li>The diamond is vertically symmetric.</li>
-            <li>The diamond has a square shape (width equals height).</li>
-            <li>The letters form a diamond shape.</li>
-            <li>The top half has the letters in ascending order.</li>
-            <li>The bottom half has the letters in descending order.</li>
-            <li>The four corners (containing the spaces) are triangles.</li>
-            </ul>
-            <h3 id="h-examples">Examples</h3>
-            <p>In the following examples, spaces are indicated by <code>·</code> characters.</p>
-            <p>Diamond for letter 'A':</p>
-            <pre><code class="language-text hljs language-plaintext" data-highlighted="true">A
-            </code></pre>
-            <p>Diamond for letter 'C':</p>
-            <pre><code class="language-text hljs language-plaintext" data-highlighted="true">··A··
-            ·B·B·
-            C···C
-            ·B·B·
-            ··A··
-            </code></pre>
-            <p>Diamond for letter 'E':</p>
-            <pre><code class="language-text hljs language-plaintext" data-highlighted="true">····A····
-            ···B·B···
-            ··C···C··
-            ·D·····D·
-            E·······E
-            ·D·····D·
-            ··C···C··
-            ···B·B···
-            ····A····
-            </code></pre>
-            <p>The tests in this exercise are different from your usual tests. Normally, a test checks if for a given input, the output matches the expected value. This is called <em>value-based testing</em>. However, this exercise uses <em>property-based testing</em>, where the tests check if for a range of inputs, the output has a specific property. The two key differences that differentiate property-based testing from value-based testing are:</p>
-            <ol>
-            <li>A property-based test works not with a single input value, but with many.</li>
-            <li>A property-based test verifies properties, not concrete values.</li>
-            </ol>
-            <p>For this exercise, the tests all verify a property of the diamond shape your code should be producing. Furthermore, all tests check if the property they test holds for all valid input letters ('A' to 'Z').</p>
-            <p>In order to facilitate propery-based testing, the tests in this exercise leverage the <a href="https://www.nuget.org/packages/FsCheck" target="_blank" rel="noreferrer">FsCheck</a> and <a href="https://packages.nuget.org/packages/FsCheck.Xunit/2.2.0" target="_blank" rel="noreferrer">FsCheck.Xunit</a> packages. To learn more about FsCheck, the documentation on the framework can be found <a href="https://fscheck.github.io/FsCheck/" target="_blank" rel="noreferrer">here</a>.</p>
-            <p>If you would like more information on property-based testing, see <a href="http://www.erikschierboom.com/2016/02/22/property-based-testing/" target="_blank" rel="noreferrer">this article</a>.</p>
-            
-            <div class="source">
-            <hr class="c-divider --small">
-            <h3>Source</h3>
-            <a target="_blank" rel="noopener" href="https://web.archive.org/web/20220807163751/http://claysnow.co.uk/recycling-tests-in-tdd/">Seb Rose<img alt="The link opens in a new window or tab" class="c-icon" src="https://assets.exercism.org/assets/icons/external-link-49b422d65245eaf4cb29a072e85d73b5c6b8aa04.svg"></a>
-            </div>
-            </section>
-            <section class="extra-info">
-            <div class="c-react-component c-react-wrapper-track-exercise-makers-button" data-react-id="track-exercise-makers-button" data-react-data="{&quot;avatar_urls&quot;:[&quot;https://assets.exercism.org/avatars/23560/0&quot;,&quot;https://assets.exercism.org/avatars/127306/0&quot;,&quot;https://assets.exercism.org/avatars/114739/0&quot;],&quot;num_authors&quot;:1,&quot;num_contributors&quot;:3,&quot;links&quot;:{&quot;makers&quot;:&quot;https://exercism.org/api/v2/tracks/csharp/exercises/diamond/makers&quot;}}" data-react-hydrate="false"><button type="button" class="c-makers-button"><div class="c-faces"><div class="c-avatar face" style="background-image: url(&quot;https://assets.exercism.org/avatars/23560/0&quot;);"><img src="https://assets.exercism.org/avatars/23560/0" alt="" class="sr-only"></div><div class="c-avatar face" style="background-image: url(&quot;https://assets.exercism.org/avatars/127306/0&quot;);"><img src="https://assets.exercism.org/avatars/127306/0" alt="" class="sr-only"></div><div class="c-avatar face" style="background-image: url(&quot;https://assets.exercism.org/avatars/114739/0&quot;);"><img src="https://assets.exercism.org/avatars/114739/0" alt="" class="sr-only"></div></div><div class="stats"><div class="authors">1 author</div><div class="contributors">3 contributors</div></div></button></div>
-            <a target="_blank" rel="noreferrer" href="https://github.com/exercism/csharp/tree/main/exercises/practice/diamond"><img alt="" class="c-icon github-icon" src="https://assets.exercism.org/assets/icons/external-site-github-10a8a76f55f4e6955417df6aa374dd48fab4392b.svg">
-            <span>Edit via GitHub</span>
-            <img alt="The link opens in a new window or tab" class="c-icon action-icon" src="https://assets.exercism.org/assets/icons/external-link-49b422d65245eaf4cb29a072e85d73b5c6b8aa04.svg">
-            </a></section>
-            
-            </section>
+<section class="instructions c-textual-content --large px-20 lg:px-32 py-20 lg:py-24">
+<h2>Instructions</h2>
+<p>The diamond kata takes as its input a letter, and outputs it in a diamond shape.
+Given a letter, it prints a diamond starting with 'A', with the supplied letter at the widest point.</p>
+<h3 id="h-requirements">Requirements</h3>
+<ul>
+<li>The first row contains one 'A'.</li>
+<li>The last row contains one 'A'.</li>
+<li>All rows, except the first and last, have exactly two identical letters.</li>
+<li>All rows have as many trailing spaces as leading spaces. (This might be 0).</li>
+<li>The diamond is horizontally symmetric.</li>
+<li>The diamond is vertically symmetric.</li>
+<li>The diamond has a square shape (width equals height).</li>
+<li>The letters form a diamond shape.</li>
+<li>The top half has the letters in ascending order.</li>
+<li>The bottom half has the letters in descending order.</li>
+<li>The four corners (containing the spaces) are triangles.</li>
+</ul>
+<h3 id="h-examples">Examples</h3>
+<p>In the following examples, spaces are indicated by <code>·</code> characters.</p>
+<p>Diamond for 1:</p>
+<pre><code class="language-text hljs language-plaintext" data-highlighted="true">*
+</code></pre>
+<p>Diamond for 3:</p>
+<pre><code class="language-text hljs language-plaintext" data-highlighted="true">
+··*··
+·*·*·
+*···*
+·*·*·
+··*··
+</code></pre>
+<p>Diamond for 5:</p>
+<pre><code class="language-text hljs language-plaintext" data-highlighted="true">
+····*····
+···*·*···
+··*···*··
+·*·····*·
+*·······*
+·*·····*·
+··*···*··
+···*·*···
+····*····
+</code></pre>
+
+
     </body>
 </html>

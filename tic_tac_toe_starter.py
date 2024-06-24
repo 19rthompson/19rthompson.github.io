@@ -21,12 +21,18 @@ def printBoard(board):
 
 #TODO implement take player move
 # this function should ask the player which space they want to go in, and which letter they 
-# want to put there
+# want to put there. It will ask which row they want to go in, then ask which column, then
+# ask which letter. So if the player says row 2, column 3, X, you would type:
+# board[1][2]=X (remember X is 1)
 def takePlayerMove(board):
     pass
 
 #TODO implement checkWin
 # write a function that will check if either player has won, and will return
 # a 1 (X) if X's win, a -1(O) if 0's win, and a 0(CLEAR)
+# Hint: if board[0][0] == X and  board[0][1] == X and board[0][2] == X, then that would count as a win for x
+# There's gotta be a way to use for loops to check every possibility faster than typing every possible win out,
+# right?
 def checkWin(board):
     pass
+
